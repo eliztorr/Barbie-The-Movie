@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Barbie | The Movie</title>
+    <style>
+      @import url("https://fonts.googleapis.com/css?family=Nixie+One");
+@import url("https://fonts.googleapis.com/css?family=League+Script");
+.container {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+.navbar {
+  width: 100%;
+  box-shadow: 0 1px 4px rgb(146 161 176 / 15%);
+}
+.nav-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 62px;
+}
+.navbar .menu-items {
+  display: flex;
+}
+.navbar .nav-container li {
+  list-style: none;
+}
+.navbar .nav-container a {
+  text-decoration: none;
+  color: #F06292;
+  font-weight: 900;
+  font-size: 36px; 
+  padding: 0.7rem;
+}
+.navbar .nav-container a:hover{
+    font-weight: bolder;
+}
+.nav-container {
+  display: block;
+  position: relative;
+  height: 60px;
+}
+.nav-container .checkbox {
+  position: absolute;
+  display: block;
+  height: 32px;
+  width: 32px;
+  top: 20px;
+  left: 20px;
+  z-index: 5;
+  opacity: 0;
+  cursor: pointer;
+}
+.nav-container .hamburger-lines {
+  display: block;
+  height: 26px;
+  width: 32px;
+  position: absolute;
+  top: 17px;
+  left: 20px;
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.nav-container .hamburger-lines .line {
+  display: block;
+  height: 4px;
+  width: 100%;
+  border-radius: 10px;
+  background: #F06292;;
+}
+.nav-container .hamburger-lines .line1 {
+  transform-origin: 0% 0%;
+  transition: transform 0.4s ease-in-out;
+}
+
+.nav-container .hamburger-lines .line2 {
+  transition: transform 0.2s ease-in-out;
+}
+
+.nav-container .hamburger-lines .line3 {
+  transform-origin: 0% 100%;
+  transition: transform 0.4s ease-in-out;
+ 
+}
+.navbar .menu-items {
+  padding-top: 20px;
+  box-shadow: inset 0 0 2000px rgba(255, 255, 255, .5);
+  height: 100vh;
+  width: 100%;
+  transform: translate(-150%);
+  display: flex;
+  flex-direction: column;
+  margin-left: -40px;
+  padding-left: 30px;
+  transition: transform 0.5s ease-in-out;
+  text-align: center;
+}
+.navbar .menu-items li {
+  margin-bottom: 1.2rem;
+  font-size: 22px;
+  font-weight: 500;
+}
+.logo {
+  position: absolute;
+  top: 5px;
+  right: 15px;
+  font-size: 1.2rem;
+  color: #F06292;
+}
+.nav-container input[type="checkbox"]:checked ~ .menu-items {
+  transform: translateX(0);
+
+}
+.nav-container input[type="checkbox"]:checked ~ .hamburger-lines .line1 {
+  transform: rotate(45deg);
+}
+
+.nav-container input[type="checkbox"]:checked ~ .hamburger-lines .line2 {
+  transform: scaleY(0);
+}
+
+.nav-container input[type="checkbox"]:checked ~ .hamburger-lines .line3 {
+  transform: rotate(-45deg);
+}
+
+.nav-container input[type="checkbox"]:checked ~ .logo{
+  display: none;
+
+}
+
+.sign {
+  transform: rotate(-10deg);
+}
+body {
+  margin: 70px;
+  background-image: url("https://s3.amazonaws.com/shecodesio-production/uploads/files/000/095/615/original/16897752772915.jpg?1693760628"); 
+  background-size: cover; 
+  background-repeat: no-repeat; 
+  font-family: 'Nixie One', Helvetica, Arial, sans-serif;
+  font-size: 50px;
+}
+#title {
+  font-size: 160px;
+  font-weight: 900; 
+}
+.neon-barbie {
+  color: #F06292;
+  text-shadow: 2px 2px 1px rgba(0,0,0,0.3), 0 0px 15px #fff, 0 0 10px #38eeff, 0 0 50px #38eeff;
+}
+.neon-pink {
+  font-family: 'League Script', Helvetica, Arial, sans-serif;
+  font-size: 150px;
+  font-weight: 800; 
+  color: #F8BBD0;
+  text-shadow: 2px 2px 1px rgba(0,0,0,0.5), 0 0 20px #fff, 0 0 10px #7d26cd, 0 0 50px #7d26cd;
+}
+    </style>
+  </head>
+  <body>
+       <nav>
+      <div class="navbar">
+        <div class="container nav-container">
+            <input class="checkbox" type="checkbox" name="" id="" />
+            <div class="hamburger-lines">
+              <span class="line line1"></span>
+              <span class="line line2"></span>
+              <span class="line line3"></span>
+            </div>  
+          <div class="menu-items">
+            <li><a href="#">About</a></li>
+            <li><a href="#">Cast</a></li>
+            <li><a href="#">Behind the Scenes</a></li>
+            <li><a href="#">Watch now</a></li>
+            <li><a href="#">Contact</a></li>
+          </div>
+        </div>
+      </div>
+    </nav>
+    <div class="container">
+  <div class="sign">
+      <div class="neon-barbie" id="title">Barbie </div>
+      <div class="neon-blue"><span class="neon-pink" >The Movie </span></s></div>
+   </div>
+</div>
+  </body>
+</html>
