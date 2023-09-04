@@ -22,6 +22,7 @@
   justify-content: space-between;
   align-items: center;
   height: 30px;
+  margin-left: -30px; 
 }
 .navbar .menu-items {
   display: flex;
@@ -81,7 +82,7 @@
   height: 4px;
   width: 100%;
   border-radius: 10px;
-  background: #F06292;;
+  background: #F06292;
 }
 .nav-container .hamburger-lines .line1 {
   transform-origin: 0% 0%;
@@ -97,17 +98,19 @@
 .navbar .menu-items {
 background: linear-gradient(to right, #e886bf 0%, #f992bd 100%);
 opacity: 0.7; 
-  padding-top: 20px;
-  box-shadow: inset 0 0 2000px rgba(255, 255, 255, .5);
-  height: 100vh;
-  width: 100%;
-  transform: translate(-150%);
-  display: flex;
-  flex-direction: column;
-  margin-left: -40px;
-  padding-left: 30px;
-  transition: transform 0.5s ease-in-out;
-  text-align: center;
+position: absolute;
+z-index: 900; 
+margin-top: 50px; 
+padding: 20px; 
+box-shadow: inset 0 0 2000px rgba(255, 255, 255, .5);
+ height: 100vh;
+width: 100%;
+ transform: translate(-150%);
+ display: flex;
+ flex-direction: column;
+ margin-right: -50px; 
+ transition: transform 0.5s ease-in-out;
+ text-align: right; 
 }
 .navbar .menu-items li {
   margin-bottom: 1.2rem;
@@ -136,10 +139,10 @@ body {
   background-repeat: no-repeat; 
   font-family: 'Nixie One', Helvetica, Arial, sans-serif;
   font-size: 50px;
-  min-height: 93vh; 
+  min-height: 100vh; 
 }
 #title {
-  font-size: 160px;
+  font-size: 180px;
   font-weight: 900; 
 }
 .neon-barbie {
@@ -148,28 +151,81 @@ body {
 }
 .neon-pink {
   font-family: 'League Script', Helvetica, Arial, sans-serif;
-  font-size: 150px;
+  font-size: 160px;
   font-weight: 800; 
   color: #F8BBD0;
   text-shadow: 2px 2px 1px rgba(0,0,0,0.5), 0 0 20px #fff, 0 0 10px #7d26cd, 0 0 50px #7d26cd;
 }
 footer {
   position: fixed;
+  text-align:center; 
   left: 0;
+  right: 0; 
   bottom: 0;
+  height: auto; 
   width: 100%;
-  background-color: rgb(195, 9, 142);
-  font-size: 20px; 
-  color: white;
-  text-align: center;
+  background-color: rgb(75, 4, 43);
+  font-family: 'Courier New', Courier, monospace; 
+  font-size: 18px; 
+  color: rgb(224, 167, 208);
 }
 .footer a{
-  color:white; 
-  text-decoration: none; 
+  color: rgb(224, 167, 208);
+  text-align: center;
+  text-decoration:none; 
 }
 .footer a:visited{
   text-decoration:none;
-  color:white;  
+ color: rgb(224, 167, 208);
+}
+@media only screen and (max-width: 576px) {
+  body {
+  background-image: url("https://s3.amazonaws.com/shecodesio-production/uploads/files/000/095/694/original/Barbie-84bbd2b2160c41c3b051221a3cb382a6.jpg?1693812829"); 
+  min-height: 102vh; 
+}
+#title {
+  font-size: 110px;
+  margin-left: -30px; 
+}
+.neon-pink {
+  font-size: 90px; 
+  margin-left: -30px; 
+}
+.nav-container .hamburger-lines .line {
+  background: #a51573;
+}
+.navbar .menu-items {
+background: linear-gradient(to right, #1e0d17 0%, #1c010c 100%);
+margin-top: 50px; 
+opacity: 0.9; 
+z-index: 1000;
+position: absolute; 
+text-align: center; 
+max-height: 45vh;
+}
+.navbar .nav-container a {
+  font-size: 35px; 
+}
+footer{
+  font-size: 14px; 
+}
+}
+@media only screen and (max-width: 916px) {
+    body {
+  background-image: url("https://s3.amazonaws.com/shecodesio-production/uploads/files/000/095/694/original/Barbie-84bbd2b2160c41c3b051221a3cb382a6.jpg?1693812829"); 
+  min-height: 102vh; 
+}
+  #title {
+  font-size: 150px;
+  margin-left: -30px; 
+}
+.neon-pink {
+  font-size: 130px; 
+  margin-left: -30px; 
+}
+footer{
+  font-size: 22px; 
+}
 }
     </style>
   </head>
@@ -200,7 +256,7 @@ footer {
    </div>
 </div>
 <footer class="footer">
-  <a href="">Open source </a>coded by <a href="">Elizabeth Torralbo </a>for the <a href="">SheCodes "Code like Barbie" Challenge</a>
+  <a href="https://github.com/eliztorr/Barbie-The-Movie">Open source </a>coded by <a href="https://www.linkedin.com/in/elizabethtorralbo/">Elizabeth Torralbo </a>for the <a href="https://www.shecodes.io/contests/code-like-barbie">SheCodes "Code like Barbie" Challenge</a>
 </footer>
   </body>
 </html>
