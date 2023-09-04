@@ -9,8 +9,10 @@
 @import url("https://fonts.googleapis.com/css?family=League+Script");
 
 :root {
-  --glow-color: hsl(320 100% 69%);
+  --glow-color: hsl(320 100% 71%);
+  --shadow-color: hsl(313, 76%, 27%); 
 }
+
 .container {
     display: flex;
     flex-direction: row;
@@ -145,7 +147,7 @@ body {
   background-repeat: no-repeat; 
   font-family: 'Nixie One', Helvetica, Arial, sans-serif;
   font-size: 50px;
-  min-height: 102vh; 
+  min-height: 100vh; 
 }
 #title {
   font-size: 180px;
@@ -161,6 +163,145 @@ body {
   font-weight: 800; 
   color: #F8BBD0;
   text-shadow: 2px 2px 1px rgba(0,0,0,0.5), 0 0 20px #fff, 0 0 10px #7d26cd, 0 0 50px #7d26cd;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+.glowing-btn {
+  position: relative;
+  color: var(--glow-color);
+  cursor: pointer;
+  padding: 0.35em 1em;
+  border: 0.10em solid var(--glow-color);
+  border-radius: 0.5em;
+  perspective: 2em; 
+  background: none;
+  font-family: 'Nixie One', Helvetica, Arial, sans-serif;
+  font-size: 60px;
+  font-weight: 900;
+  letter-spacing: 15px;
+  margin-top: 250px; 
+  margin-left: 420px; 
+
+  -webkit-box-shadow: inset 0px 0px 0.5em 0px var(--glow-color),
+    0px 0px 0.5em 0px var(--glow-color);
+  -moz-box-shadow: inset 0px 0px 0.5em 0px var(--glow-color),
+    0px 0px 0.5em 0px var(--glow-color);
+  box-shadow: inset 0px 0px 0.5em 0px var(--glow-color),
+    0px 0px 0.5em 0px var(--glow-color);
+  animation: border-flicker 2s linear infinite;
+}
+.glowing-txt {
+  float: right;
+  margin-right: -0.8em;
+  -webkit-text-shadow: 0 0 0.15em hsla(315, 66%, 19%, 0.3),
+    0 0 0.45em var(--glow-color);
+  -moz-text-shadow: 0 0 0.15em hsla(0, 6%, 15%, 0.3),
+    0 0 0.45em var(--shadow-color);
+  text-shadow: 0 0 0.15em hsla(0, 12%, 23%, 0.3), 0 0 0.55em var(--shadow-color);
+  animation: text-flicker 3s linear infinite;
+}
+.glowing-btn::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  opacity: 0.8;
+  filter: blur(1em);
+  transform: translateY(120%) rotateX(95deg) scale(1, 0.45);
+  background: var(--glow-color);
+  pointer-events: none;
+}
+.glowing-btn::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  opacity: 0;
+  z-index: -1;
+  background-color: var(--glow-color);
+  box-shadow: 0 0 2em 0.2em var(--glow-color);
+  transition: opacity 100ms linear;
+}
+.glowing-btn:hover {
+  color: rgba(0, 0, 0, 0.8);
+  text-shadow: none;
+  animation: none;
+}
+.glowing-btn:hover .glowing-txt {
+  animation: none;
+}
+.glowing-btn:hover:before {
+  filter: blur(1em);
+  opacity: 1;
+}
+.glowing-btn:hover:after {
+  opacity: 1;
+}
+@keyframes text-flicker {
+  0% {
+    opacity: 0.3;
+  }
+  2% {
+    opacity: 1;
+  }
+  8% {
+    opacity: 0.1;
+  }
+  9% {
+    opacity: 1;
+  }
+  12% {
+    opacity: 0.1;
+  }
+  20% {
+    opacity: 1;
+  }
+  25% {
+    opacity: 0.3;
+  }
+  30% {
+    opacity: 1;
+  }
+  70% {
+    opacity: 0.7;
+  }
+  72% {
+    opacity: 0.2;
+  }
+  77% {
+    opacity: 0.9;
+  }
+  100% {
+    opacity: 0.9;
+  }
+}
+@keyframes border-flicker {
+  0% {
+    opacity: 0.1;
+  }
+  2% {
+    opacity: 1;
+  }
+  4% {
+    opacity: 0.1;
+  }
+  8% {
+    opacity: 1;
+  }
+  70% {
+    opacity: 0.7;
+  }
+  100% {
+    opacity: 1;
+  }
 }
 footer {
   position: fixed;
@@ -184,17 +325,39 @@ footer {
   text-decoration:none;
  color: rgb(224, 167, 208);
 }
-@media only screen and (max-width: 576px) {
-  body {
+@media only screen and (max-width: 1025px) and (min-width: 576px) {
+    body {
   background-image: url("https://s3.amazonaws.com/shecodesio-production/uploads/files/000/095/694/original/Barbie-84bbd2b2160c41c3b051221a3cb382a6.jpg?1693812829"); 
-  min-height: 118vh; 
-}
-#title {
-  font-size: 110px;
+    }
+    #title  {
+  font-size: 150px;
   margin-left: -30px; 
 }
 .neon-pink {
-  font-size: 90px; 
+  font-size: 130px; 
+  margin-left: -30px; 
+}
+ .glowing-btn{
+    margin-left: 350px; 
+    margin-top: 390px; 
+    font-size: 30px!important; 
+    color: rgb(170, 9, 130); 
+  }
+footer{
+  font-size: 20px; 
+}
+}
+@media only screen and (max-width: 576px) {
+  body {
+  background-image: url("https://s3.amazonaws.com/shecodesio-production/uploads/files/000/095/694/original/Barbie-84bbd2b2160c41c3b051221a3cb382a6.jpg?1693812829"); 
+  min-height: 90vh; 
+}
+#title {
+  font-size: 90px!important;
+  margin-left: -30px; 
+}
+.neon-pink {
+  font-size: 70px!important; 
   margin-left: -30px; 
 }
 .nav-container .hamburger-lines .line {
@@ -207,33 +370,24 @@ opacity: 0.9;
 z-index: 1000;
 position: absolute; 
 text-align: center; 
-max-height: 45vh;
+max-height: 60vh;
 }
 .navbar .nav-container a {
   font-size: 35px; 
 }
+ .glowing-btn{
+    margin-left: 50px; 
+    margin-top: 280px!important; 
+    font-size: 30px!important; 
+    color: rgb(170, 9, 130); 
+  }
 footer{
-  font-size: 12px; 
+  font-size: 14px!important; 
   margin-left: auto; 
   margin-right: auto; 
 }
 }
-@media only screen and (max-width: 1025px) {
-    body {
-  background-image: url("https://s3.amazonaws.com/shecodesio-production/uploads/files/000/095/694/original/Barbie-84bbd2b2160c41c3b051221a3cb382a6.jpg?1693812829"); 
-    }
-    #title  {
-  font-size: 150px;
-  margin-left: -30px; 
-}
-.neon-pink {
-  font-size: 130px; 
-  margin-left: -30px; 
-}
-footer{
-  font-size: 20px; 
-}
-}
+
     </style>
   </head>
   <body>
@@ -250,7 +404,7 @@ footer{
             <li><a href="#">About</a></li>
             <li><a href="#">Cast</a></li>
             <li><a href="#">Behind the Scenes</a></li>
-            <li><a href="#">Watch now</a></li>
+            <li><a href="#">Links</a></li>
             <li><a href="#">Contact</a></li>
           </div>
         </div>
@@ -262,6 +416,7 @@ footer{
       <div class="neon-blue"><span class="neon-pink" >The Movie </span></s></div>
    </div>
 </div>
+<button class='glowing-btn'><span class='glowing-txt'>WATCH NOW </span></button>
 <footer class="footer">
   <a href="https://github.com/eliztorr/Barbie-The-Movie">Open source </a>coded by <a href="https://www.linkedin.com/in/elizabethtorralbo/">Elizabeth Torralbo </a>for the <a href="https://www.shecodes.io/contests/code-like-barbie">SheCodes "Code like Barbie" Challenge</a>
 </footer>
