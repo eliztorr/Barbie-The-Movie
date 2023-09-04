@@ -6,400 +6,397 @@
     <title>Barbie | The Movie</title>
     <style>
       @import url("https://fonts.googleapis.com/css?family=Nixie+One");
-@import url("https://fonts.googleapis.com/css?family=League+Script");
+      @import url("https://fonts.googleapis.com/css?family=League+Script");
 
-:root {
-  --glow-color: hsl(320 100% 71%);
-  --shadow-color: hsl(313, 76%, 27%); 
-}
+      :root {
+        --glow-color: hsl(320 100% 71%);
+        --shadow-color: hsl(313, 76%, 27%);
+      }
 
-.container {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap; 
-}
-.navbar {
-  width: 100%;
-  box-shadow: 0 1px 4px rgb(146 161 176 / 15%);
-}
-.nav-container {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  height: 30px;
-  margin-left: -30px; 
-}
-.navbar .menu-items {
-  display: flex;
-}
-.navbar .nav-container li {
-  list-style: none;
-}
-.navbar .nav-container a {
-  text-decoration: none;
-  color: #ec10a2;
-    text-shadow:
-      0 0 7px #fff,
-      0 0 10px #fff,
-      0 0 21px #fff,
-      0 0 42px rgb(209, 21, 143),
-      0 0 82px rgb(212, 18, 154),
-      0 0 92px rgb(214, 13, 154),
-      0 0 102px rgb(170, 9, 130),
-      0 0 151px rgb(232, 59, 177);
-  font-weight: 900;
-  font-size: 55px; 
-  padding: 0.7rem; 
-}
-.navbar .nav-container a:hover{
-    font-weight: bolder;
-}
-.nav-container {
-  display: block;
-  position: relative;
-  height: 40px;
-}
-.nav-container .checkbox {
-  position: absolute;
-  display: block;
-  height: 32px;
-  width: 32px;
-  top: 20px;
-  left: 20px;
-  z-index: 5;
-  opacity: 0;
-  cursor: pointer;
-}
-.nav-container .hamburger-lines {
-  display: block;
-  height: 26px;
-  width: 32px;
-  position: absolute;
-  top: 17px;
-  left: 20px;
-  z-index: 2;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-}
-.nav-container .hamburger-lines .line {
-  display: block;
-  height: 4px;
-  width: 100%;
-  border-radius: 10px;
-  background: #F06292;
-}
-.nav-container .hamburger-lines .line1 {
-  transform-origin: 0% 0%;
-  transition: transform 0.4s ease-in-out;
-}
-.nav-container .hamburger-lines .line2 {
-  transition: transform 0.2s ease-in-out;
-}
-.nav-container .hamburger-lines .line3 {
-  transform-origin: 0% 100%;
-  transition: transform 0.4s ease-in-out;
-}
-.navbar .menu-items {
-background: linear-gradient(to right, #e886bf 0%, #f992bd 100%);
-opacity: 0.7; 
-position: absolute;
-z-index: 900; 
-margin-top: 50px; 
-padding: 20px; 
-box-shadow: inset 0 0 2000px rgba(255, 255, 255, .5);
- height: 80vh;
-width: 100%;
- transform: translate(-150%);
- display: flex;
- flex-direction: column;
- margin-right: -50px; 
- transition: transform 0.5s ease-in-out;
- text-align: center; 
-}
-.navbar .menu-items li {
-  margin-bottom: 1.2rem;
-  font-size: 22px;
-  font-weight: 500;
-}
-.navbar .menu-items li:hover{
-transform: scale(1);
-}
-.nav-container input[type="checkbox"]:checked ~ .menu-items {
-  transform: translateX(0);
-}
-.nav-container input[type="checkbox"]:checked ~ .hamburger-lines .line1 {
-  transform: rotate(45deg);
-}
-.nav-container input[type="checkbox"]:checked ~ .hamburger-lines .line2 {
-  transform: scaleY(0);
-}
-.nav-container input[type="checkbox"]:checked ~ .hamburger-lines .line3 {
-  transform: rotate(-45deg);
-}
-.sign {
-  transform: rotate(-10deg);
-}
-body {
-  margin: 50px;
-  background-image: url("https://s3.amazonaws.com/shecodesio-production/uploads/files/000/095/615/original/16897752772915.jpg?1693760628"); 
-  background-size: cover; 
-  background-repeat: no-repeat; 
-  font-family: 'Nixie One', Helvetica, Arial, sans-serif;
-  font-size: 50px;
-  min-height: 100vh; 
-}
-#title {
-  font-size: 180px;
-  font-weight: 900; 
-}
-.neon-barbie {
-  color: #F06292;
-  text-shadow: 2px 2px 1px rgba(0,0,0,0.3), 0 0px 15px #fff, 0 0 10px #38eeff, 0 0 50px #38eeff;
-}
-.neon-pink {
-  font-family: 'League Script', Helvetica, Arial, sans-serif;
-  font-size: 160px;
-  font-weight: 800; 
-  color: #F8BBD0;
-  text-shadow: 2px 2px 1px rgba(0,0,0,0.5), 0 0 20px #fff, 0 0 10px #7d26cd, 0 0 50px #7d26cd;
-}
+      .container {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+      }
+      .navbar {
+        width: 100%;
+        box-shadow: 0 1px 4px rgb(146 161 176 / 15%);
+      }
+      .nav-container {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        height: 30px;
+        margin-left: -30px;
+      }
+      .navbar .menu-items {
+        display: flex;
+      }
+      .navbar .nav-container li {
+        list-style: none;
+      }
+      .navbar .nav-container a {
+        text-decoration: none;
+        color: #ec10a2;
+        text-shadow: 0 0 7px #fff, 0 0 10px #fff, 0 0 21px #fff,
+          0 0 42px rgb(209, 21, 143), 0 0 82px rgb(212, 18, 154),
+          0 0 92px rgb(214, 13, 154), 0 0 102px rgb(170, 9, 130),
+          0 0 151px rgb(232, 59, 177);
+        font-weight: 900;
+        font-size: 55px;
+        padding: 0.7rem;
+      }
+      .navbar .nav-container a:hover {
+        font-weight: bolder;
+      }
+      .nav-container {
+        display: block;
+        position: relative;
+        height: 40px;
+      }
+      .nav-container .checkbox {
+        position: absolute;
+        display: block;
+        height: 32px;
+        width: 32px;
+        top: 20px;
+        left: 20px;
+        z-index: 5;
+        opacity: 0;
+        cursor: pointer;
+      }
+      .nav-container .hamburger-lines {
+        display: block;
+        height: 26px;
+        width: 32px;
+        position: absolute;
+        top: 17px;
+        left: 20px;
+        z-index: 2;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+      }
+      .nav-container .hamburger-lines .line {
+        display: block;
+        height: 4px;
+        width: 100%;
+        border-radius: 10px;
+        background: #f06292;
+      }
+      .nav-container .hamburger-lines .line1 {
+        transform-origin: 0% 0%;
+        transition: transform 0.4s ease-in-out;
+      }
+      .nav-container .hamburger-lines .line2 {
+        transition: transform 0.2s ease-in-out;
+      }
+      .nav-container .hamburger-lines .line3 {
+        transform-origin: 0% 100%;
+        transition: transform 0.4s ease-in-out;
+      }
+      .navbar .menu-items {
+        background: linear-gradient(to right, #e886bf 0%, #f992bd 100%);
+        opacity: 0.7;
+        position: absolute;
+        z-index: 900;
+        margin-top: 50px;
+        padding: 20px;
+        box-shadow: inset 0 0 2000px rgba(255, 255, 255, 0.5);
+        height: 80vh;
+        width: 100%;
+        transform: translate(-150%);
+        display: flex;
+        flex-direction: column;
+        margin-right: -50px;
+        transition: transform 0.5s ease-in-out;
+        text-align: center;
+      }
+      .navbar .menu-items li {
+        margin-bottom: 1.2rem;
+        font-size: 22px;
+        font-weight: 500;
+      }
+      .navbar .menu-items li:hover {
+        transform: scale(1);
+      }
+      .nav-container input[type="checkbox"]:checked ~ .menu-items {
+        transform: translateX(0);
+      }
+      .nav-container input[type="checkbox"]:checked ~ .hamburger-lines .line1 {
+        transform: rotate(45deg);
+      }
+      .nav-container input[type="checkbox"]:checked ~ .hamburger-lines .line2 {
+        transform: scaleY(0);
+      }
+      .nav-container input[type="checkbox"]:checked ~ .hamburger-lines .line3 {
+        transform: rotate(-45deg);
+      }
+      .sign {
+        transform: rotate(-10deg);
+      }
+      body {
+        margin: 50px;
+        background-image: url("https://s3.amazonaws.com/shecodesio-production/uploads/files/000/095/615/original/16897752772915.jpg?1693760628");
+        background-size: cover;
+        background-repeat: no-repeat;
+        font-family: "Nixie One", Helvetica, Arial, sans-serif;
+        font-size: 50px;
+        min-height: 100vh;
+      }
+      #title {
+        font-size: 180px;
+        font-weight: 900;
+      }
+      .neon-barbie {
+        color: #f06292;
+        text-shadow: 2px 2px 1px rgba(0, 0, 0, 0.3), 0 0px 15px #fff,
+          0 0 10px #38eeff, 0 0 50px #38eeff;
+      }
+      .neon-pink {
+        font-family: "League Script", Helvetica, Arial, sans-serif;
+        font-size: 160px;
+        font-weight: 800;
+        color: #f8bbd0;
+        text-shadow: 2px 2px 1px rgba(0, 0, 0, 0.5), 0 0 20px #fff,
+          0 0 10px #7d26cd, 0 0 50px #7d26cd;
+      }
 
-*,
-*::before,
-*::after {
-  box-sizing: border-box;
-}
-.glowing-btn {
-  position: relative;
-  color: var(--glow-color);
-  cursor: pointer;
-  padding: 0.35em 1em;
-  border: 0.10em solid var(--glow-color);
-  border-radius: 0.5em;
-  perspective: 2em; 
-  background: none;
-  font-family: 'Nixie One', Helvetica, Arial, sans-serif;
-  font-size: 60px;
-  font-weight: 900;
-  letter-spacing: 15px;
-  margin-top: 250px; 
-  margin-left: 420px; 
+      *,
+      *::before,
+      *::after {
+        box-sizing: border-box;
+      }
+      .glowing-btn {
+        position: relative;
+        color: var(--glow-color);
+        cursor: pointer;
+        padding: 0.35em 1em;
+        border: 0.1em solid var(--glow-color);
+        border-radius: 0.5em;
+        perspective: 2em;
+        background: none;
+        font-family: "Nixie One", Helvetica, Arial, sans-serif;
+        font-size: 60px;
+        font-weight: 900;
+        letter-spacing: 15px;
+        margin-top: 250px;
+        margin-left: 420px;
 
-  -webkit-box-shadow: inset 0px 0px 0.5em 0px var(--glow-color),
-    0px 0px 0.5em 0px var(--glow-color);
-  -moz-box-shadow: inset 0px 0px 0.5em 0px var(--glow-color),
-    0px 0px 0.5em 0px var(--glow-color);
-  box-shadow: inset 0px 0px 0.5em 0px var(--glow-color),
-    0px 0px 0.5em 0px var(--glow-color);
-  animation: border-flicker 2s linear infinite;
-}
-.glowing-txt {
-  float: right;
-  margin-right: -0.8em;
-  -webkit-text-shadow: 0 0 0.15em hsla(315, 66%, 19%, 0.3),
-    0 0 0.45em var(--glow-color);
-  -moz-text-shadow: 0 0 0.15em hsla(0, 6%, 15%, 0.3),
-    0 0 0.45em var(--shadow-color);
-  text-shadow: 0 0 0.15em hsla(0, 12%, 23%, 0.3), 0 0 0.55em var(--shadow-color);
-  animation: text-flicker 3s linear infinite;
-}
-.glowing-btn::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  opacity: 0.8;
-  filter: blur(1em);
-  transform: translateY(120%) rotateX(95deg) scale(1, 0.45);
-  background: var(--glow-color);
-  pointer-events: none;
-}
-.glowing-btn::after {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  opacity: 0;
-  z-index: -1;
-  background-color: var(--glow-color);
-  box-shadow: 0 0 2em 0.2em var(--glow-color);
-  transition: opacity 100ms linear;
-}
-.glowing-btn:hover {
-  color: rgba(0, 0, 0, 0.8);
-  text-shadow: none;
-  animation: none;
-}
-.glowing-btn:hover .glowing-txt {
-  animation: none;
-}
-.glowing-btn:hover:before {
-  filter: blur(1em);
-  opacity: 1;
-}
-.glowing-btn:hover:after {
-  opacity: 1;
-}
-@keyframes text-flicker {
-  0% {
-    opacity: 0.3;
-  }
-  2% {
-    opacity: 1;
-  }
-  8% {
-    opacity: 0.1;
-  }
-  9% {
-    opacity: 1;
-  }
-  12% {
-    opacity: 0.1;
-  }
-  20% {
-    opacity: 1;
-  }
-  25% {
-    opacity: 0.3;
-  }
-  30% {
-    opacity: 1;
-  }
-  70% {
-    opacity: 0.7;
-  }
-  72% {
-    opacity: 0.2;
-  }
-  77% {
-    opacity: 0.9;
-  }
-  100% {
-    opacity: 0.9;
-  }
-}
-@keyframes border-flicker {
-  0% {
-    opacity: 0.1;
-  }
-  2% {
-    opacity: 1;
-  }
-  4% {
-    opacity: 0.1;
-  }
-  8% {
-    opacity: 1;
-  }
-  70% {
-    opacity: 0.7;
-  }
-  100% {
-    opacity: 1;
-  }
-}
-footer {
-  position: fixed;
-  text-align:center; 
-  left: 0;
-  right: 0; 
-  bottom: 0;
-  height: auto; 
-  width: 100%;
-  background-color: rgb(75, 4, 43);
-  font-family: 'Courier New', Courier, monospace; 
-  font-size: 18px; 
-  color: rgb(224, 167, 208);
-}
-.footer a{
-  color: rgb(224, 167, 208);
-  text-align: center;
-  text-decoration:none; 
-}
-.footer a:visited{
-  text-decoration:none;
- color: rgb(224, 167, 208);
-}
-@media only screen and (max-width: 1025px) and (min-width: 576px) {
-    body {
-  background-image: url("https://s3.amazonaws.com/shecodesio-production/uploads/files/000/095/694/original/Barbie-84bbd2b2160c41c3b051221a3cb382a6.jpg?1693812829"); 
-    }
-    #title  {
-  font-size: 150px;
-  margin-left: -30px; 
-}
-.neon-pink {
-  font-size: 130px; 
-  margin-left: -30px; 
-}
- .glowing-btn{
-    margin-left: 350px; 
-    margin-top: 390px; 
-    font-size: 30px!important; 
-    color: rgb(170, 9, 130); 
-  }
-footer{
-  font-size: 20px; 
-}
-}
-@media only screen and (max-width: 576px) {
-  body {
-  background-image: url("https://s3.amazonaws.com/shecodesio-production/uploads/files/000/095/694/original/Barbie-84bbd2b2160c41c3b051221a3cb382a6.jpg?1693812829"); 
-  min-height: 90vh; 
-}
-#title {
-  font-size: 90px!important;
-  margin-left: -30px; 
-}
-.neon-pink {
-  font-size: 70px!important; 
-  margin-left: -30px; 
-}
-.nav-container .hamburger-lines .line {
-  background: #a51573;
-}
-.navbar .menu-items {
-background: linear-gradient(to right, #1e0d17 0%, #1c010c 100%);
-margin-top: 50px; 
-opacity: 0.9; 
-z-index: 1000;
-position: absolute; 
-text-align: center; 
-max-height: 60vh;
-}
-.navbar .nav-container a {
-  font-size: 35px; 
-}
- .glowing-btn{
-    margin-left: 50px; 
-    margin-top: 280px!important; 
-    font-size: 30px!important; 
-    color: rgb(170, 9, 130); 
-  }
-footer{
-  font-size: 14px!important; 
-  margin-left: auto; 
-  margin-right: auto; 
-}
-}
-
+        -webkit-box-shadow: inset 0px 0px 0.5em 0px var(--glow-color),
+          0px 0px 0.5em 0px var(--glow-color);
+        -moz-box-shadow: inset 0px 0px 0.5em 0px var(--glow-color),
+          0px 0px 0.5em 0px var(--glow-color);
+        box-shadow: inset 0px 0px 0.5em 0px var(--glow-color),
+          0px 0px 0.5em 0px var(--glow-color);
+        animation: border-flicker 2s linear infinite;
+      }
+      .glowing-txt {
+        float: right;
+        margin-right: -0.8em;
+        -webkit-text-shadow: 0 0 0.15em hsla(315, 66%, 19%, 0.3),
+          0 0 0.45em var(--glow-color);
+        -moz-text-shadow: 0 0 0.15em hsla(0, 6%, 15%, 0.3),
+          0 0 0.45em var(--shadow-color);
+        text-shadow: 0 0 0.15em hsla(0, 12%, 23%, 0.3),
+          0 0 0.55em var(--shadow-color);
+        animation: text-flicker 3s linear infinite;
+      }
+      .glowing-btn::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        opacity: 0.8;
+        filter: blur(1em);
+        transform: translateY(120%) rotateX(95deg) scale(1, 0.45);
+        background: var(--glow-color);
+        pointer-events: none;
+      }
+      .glowing-btn::after {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        opacity: 0;
+        z-index: -1;
+        background-color: var(--glow-color);
+        box-shadow: 0 0 2em 0.2em var(--glow-color);
+        transition: opacity 100ms linear;
+      }
+      .glowing-btn:hover {
+        color: rgba(0, 0, 0, 0.8);
+        text-shadow: none;
+        animation: none;
+      }
+      .glowing-btn:hover .glowing-txt {
+        animation: none;
+      }
+      .glowing-btn:hover:before {
+        filter: blur(1em);
+        opacity: 1;
+      }
+      .glowing-btn:hover:after {
+        opacity: 1;
+      }
+      @keyframes text-flicker {
+        0% {
+          opacity: 0.3;
+        }
+        2% {
+          opacity: 1;
+        }
+        8% {
+          opacity: 0.1;
+        }
+        9% {
+          opacity: 1;
+        }
+        12% {
+          opacity: 0.1;
+        }
+        20% {
+          opacity: 1;
+        }
+        25% {
+          opacity: 0.3;
+        }
+        30% {
+          opacity: 1;
+        }
+        70% {
+          opacity: 0.7;
+        }
+        72% {
+          opacity: 0.2;
+        }
+        77% {
+          opacity: 0.9;
+        }
+        100% {
+          opacity: 0.9;
+        }
+      }
+      @keyframes border-flicker {
+        0% {
+          opacity: 0.1;
+        }
+        2% {
+          opacity: 1;
+        }
+        4% {
+          opacity: 0.1;
+        }
+        8% {
+          opacity: 1;
+        }
+        70% {
+          opacity: 0.7;
+        }
+        100% {
+          opacity: 1;
+        }
+      }
+      footer {
+        position: fixed;
+        text-align: center;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        height: auto;
+        width: 100%;
+        background-color: rgb(75, 4, 43);
+        font-family: "Courier New", Courier, monospace;
+        font-size: 18px;
+        color: rgb(224, 167, 208);
+      }
+      .footer a {
+        color: rgb(224, 167, 208);
+        text-align: center;
+        text-decoration: none;
+      }
+      .footer a:visited {
+        text-decoration: none;
+        color: rgb(224, 167, 208);
+      }
+      @media only screen and (max-width: 1025px) and (min-width: 576px) {
+        body {
+          background-image: url("https://s3.amazonaws.com/shecodesio-production/uploads/files/000/095/694/original/Barbie-84bbd2b2160c41c3b051221a3cb382a6.jpg?1693812829");
+        }
+        #title {
+          font-size: 150px;
+          margin-left: -30px;
+        }
+        .neon-pink {
+          font-size: 130px;
+          margin-left: -30px;
+        }
+        .glowing-btn {
+          margin-left: 350px;
+          margin-top: 390px;
+          font-size: 30px !important;
+          color: rgb(170, 9, 130);
+        }
+        footer {
+          font-size: 20px;
+        }
+      }
+      @media only screen and (max-width: 576px) {
+        body {
+          background-image: url("https://s3.amazonaws.com/shecodesio-production/uploads/files/000/095/694/original/Barbie-84bbd2b2160c41c3b051221a3cb382a6.jpg?1693812829");
+          min-height: 90vh;
+        }
+        #title {
+          font-size: 90px !important;
+          margin-left: -30px;
+        }
+        .neon-pink {
+          font-size: 70px !important;
+          margin-left: -30px;
+        }
+        .nav-container .hamburger-lines .line {
+          background: #a51573;
+        }
+        .navbar .menu-items {
+          background: linear-gradient(to right, #1e0d17 0%, #1c010c 100%);
+          margin-top: 50px;
+          opacity: 0.9;
+          z-index: 1000;
+          position: absolute;
+          text-align: center;
+          max-height: 60vh;
+        }
+        .navbar .nav-container a {
+          font-size: 35px;
+        }
+        .glowing-btn {
+          margin-left: 50px;
+          margin-top: 280px !important;
+          font-size: 30px !important;
+          color: rgb(170, 9, 130);
+        }
+        footer {
+          font-size: 14px !important;
+          margin-left: auto;
+          margin-right: auto;
+        }
+      }
     </style>
   </head>
   <body>
-       <nav>
+    <nav>
       <div class="navbar">
         <div class="container nav-container">
-            <input class="checkbox" type="checkbox" name="" id="" />
-            <div class="hamburger-lines">
-              <span class="line line1"></span>
-              <span class="line line2"></span>
-              <span class="line line3"></span>
-            </div>  
+          <input class="checkbox" type="checkbox" name="" id="" />
+          <div class="hamburger-lines">
+            <span class="line line1"></span>
+            <span class="line line2"></span>
+            <span class="line line3"></span>
+          </div>
           <div class="menu-items">
             <li><a href="#">About</a></li>
             <li><a href="#">Cast</a></li>
@@ -411,14 +408,23 @@ footer{
       </div>
     </nav>
     <div class="container">
-  <div class="sign">
-      <div class="neon-barbie" id="title">Barbie </div>
-      <div class="neon-blue"><span class="neon-pink" >The Movie </span></s></div>
-   </div>
-</div>
-<button class='glowing-btn'><span class='glowing-txt'>WATCH NOW </span></button>
-<footer class="footer">
-  <a href="https://github.com/eliztorr/Barbie-The-Movie">Open source </a>coded by <a href="https://www.linkedin.com/in/elizabethtorralbo/">Elizabeth Torralbo </a>for the <a href="https://www.shecodes.io/contests/code-like-barbie">SheCodes "Code like Barbie" Challenge</a>
-</footer>
+      <div class="sign">
+        <div class="neon-barbie" id="title">Barbie</div>
+        <div class="neon-blue"><span class="neon-pink">The Movie </span></div>
+      </div>
+    </div>
+    <button class="glowing-btn">
+      <span class="glowing-txt">WATCH NOW </span>
+    </button>
+    <footer class="footer">
+      <a href="https://github.com/eliztorr/Barbie-The-Movie">Open source </a
+      >coded by
+      <a href="https://www.linkedin.com/in/elizabethtorralbo/"
+        >Elizabeth Torralbo </a
+      >for the
+      <a href="https://www.shecodes.io/contests/code-like-barbie"
+        >SheCodes "Code like Barbie" Challenge</a
+      >
+    </footer>
   </body>
 </html>
