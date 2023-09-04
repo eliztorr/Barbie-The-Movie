@@ -8,6 +8,9 @@
       @import url("https://fonts.googleapis.com/css?family=Nixie+One");
 @import url("https://fonts.googleapis.com/css?family=League+Script");
 
+:root {
+  --glow-color: hsl(320 100% 69%);
+}
 .container {
     display: flex;
     flex-direction: row;
@@ -52,7 +55,7 @@
 .nav-container {
   display: block;
   position: relative;
-  height: 60px;
+  height: 40px;
 }
 .nav-container .checkbox {
   position: absolute;
@@ -103,19 +106,22 @@ z-index: 900;
 margin-top: 50px; 
 padding: 20px; 
 box-shadow: inset 0 0 2000px rgba(255, 255, 255, .5);
- height: 100vh;
+ height: 80vh;
 width: 100%;
  transform: translate(-150%);
  display: flex;
  flex-direction: column;
  margin-right: -50px; 
  transition: transform 0.5s ease-in-out;
- text-align: right; 
+ text-align: center; 
 }
 .navbar .menu-items li {
   margin-bottom: 1.2rem;
   font-size: 22px;
   font-weight: 500;
+}
+.navbar .menu-items li:hover{
+transform: scale(1);
 }
 .nav-container input[type="checkbox"]:checked ~ .menu-items {
   transform: translateX(0);
@@ -133,13 +139,13 @@ width: 100%;
   transform: rotate(-10deg);
 }
 body {
-  margin: 70px;
+  margin: 50px;
   background-image: url("https://s3.amazonaws.com/shecodesio-production/uploads/files/000/095/615/original/16897752772915.jpg?1693760628"); 
   background-size: cover; 
   background-repeat: no-repeat; 
   font-family: 'Nixie One', Helvetica, Arial, sans-serif;
   font-size: 50px;
-  min-height: 100vh; 
+  min-height: 102vh; 
 }
 #title {
   font-size: 180px;
@@ -181,7 +187,7 @@ footer {
 @media only screen and (max-width: 576px) {
   body {
   background-image: url("https://s3.amazonaws.com/shecodesio-production/uploads/files/000/095/694/original/Barbie-84bbd2b2160c41c3b051221a3cb382a6.jpg?1693812829"); 
-  min-height: 102vh; 
+  min-height: 118vh; 
 }
 #title {
   font-size: 110px;
@@ -207,15 +213,16 @@ max-height: 45vh;
   font-size: 35px; 
 }
 footer{
-  font-size: 14px; 
+  font-size: 12px; 
+  margin-left: auto; 
+  margin-right: auto; 
 }
 }
-@media only screen and (max-width: 916px) {
+@media only screen and (max-width: 1025px) {
     body {
   background-image: url("https://s3.amazonaws.com/shecodesio-production/uploads/files/000/095/694/original/Barbie-84bbd2b2160c41c3b051221a3cb382a6.jpg?1693812829"); 
-  min-height: 102vh; 
-}
-  #title {
+    }
+    #title  {
   font-size: 150px;
   margin-left: -30px; 
 }
@@ -224,7 +231,7 @@ footer{
   margin-left: -30px; 
 }
 footer{
-  font-size: 22px; 
+  font-size: 20px; 
 }
 }
     </style>
