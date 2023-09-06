@@ -135,6 +135,9 @@
       .sign {
         transform: rotate(-10deg);
       }
+      .subtitle {
+        transform: rotate(10deg);
+      }
       body {
         margin: 50px;
         background-image: url("https://s3.amazonaws.com/shecodesio-production/uploads/files/000/095/615/original/16897752772915.jpg?1693760628");
@@ -142,7 +145,7 @@
         background-repeat: no-repeat;
         font-family: "Nixie One", Helvetica, Arial, sans-serif;
         font-size: 50px;
-        min-height: 100vh;
+        min-height: 98vh;
       }
       #title {
         font-size: 180px;
@@ -160,6 +163,23 @@
         color: #f8bbd0;
         text-shadow: 2px 2px 1px rgba(0, 0, 0, 0.5), 0 0 20px #fff,
           0 0 10px #7d26cd, 0 0 50px #7d26cd;
+        margin-top: 10px;
+      }
+      .quote-container {
+        max-width: 800px;
+      }
+      .slogan {
+        font-family: "Nixie One", Helvetica, Arial, sans-serif;
+        color: rgb(27, 26, 26);
+        text-shadow: 3px 3px 1px rgba(174, 131, 162, 0.3), 0 10px 15px #fff;
+        font-weight: 900;
+        font-size: 50px;
+        margin-top: 20px;
+        letter-spacing: 5px;
+      }
+      .greta {
+        color: white;
+        font-weight: 700;
       }
 
       *,
@@ -180,8 +200,8 @@
         font-size: 60px;
         font-weight: 900;
         letter-spacing: 15px;
-        margin-top: 250px;
-        margin-left: 420px;
+        margin-top: 2px;
+        margin-left: 1170px;
 
         -webkit-box-shadow: inset 0px 0px 0.5em 0px var(--glow-color),
           0px 0px 0.5em 0px var(--glow-color);
@@ -329,26 +349,36 @@
         }
         #title {
           font-size: 150px;
-          margin-left: -30px;
+          margin-left: 10px;
         }
         .neon-pink {
           font-size: 130px;
           margin-left: -30px;
         }
+        .slogan {
+          visibility: hidden;
+        }
+        .greta {
+          font-size: 34px;
+          margin-top: 90px;
+          margin-left: -50px;
+          color: black;
+        }
         .glowing-btn {
-          margin-left: 350px;
-          margin-top: 390px;
+          margin-left: 100px;
+          margin-top: -100px;
           font-size: 30px !important;
           color: rgb(170, 9, 130);
         }
         footer {
-          font-size: 20px;
+          font-size: 18px;
+          text-align: center;
+          text-size-adjust: auto;
         }
       }
       @media only screen and (max-width: 576px) {
         body {
           background-image: url("https://s3.amazonaws.com/shecodesio-production/uploads/files/000/095/694/original/Barbie-84bbd2b2160c41c3b051221a3cb382a6.jpg?1693812829");
-          min-height: 90vh;
         }
         #title {
           font-size: 90px !important;
@@ -373,16 +403,25 @@
         .navbar .nav-container a {
           font-size: 35px;
         }
+        .greta {
+          font-size: 26px;
+          margin-left: -50px;
+          margin-top: 80px;
+          color: black;
+        }
+        .slogan {
+          visibility: hidden;
+          font-size: 2px;
+        }
         .glowing-btn {
-          margin-left: 50px;
-          margin-top: 280px !important;
+          margin-left: 40px;
+          margin-top: 50px !important;
           font-size: 30px !important;
           color: rgb(170, 9, 130);
         }
         footer {
           font-size: 14px !important;
-          margin-left: auto;
-          margin-right: auto;
+          width: 100%;
         }
       }
     </style>
@@ -411,11 +450,22 @@
       <div class="sign">
         <div class="neon-barbie" id="title">Barbie</div>
         <div class="neon-blue"><span class="neon-pink">The Movie </span></div>
+        <div class="subtitle">
+          <div class="greta">A film by Greta Gerwig</div>
+          <div class="quote-container">
+            <div class="slogan">
+              <em
+                >Barbie has a great day every day, but Ken only has a great day
+                if Barbie looks at him</em
+              >
+            </div>
+          </div>
+        </div>
       </div>
+      <button class="glowing-btn">
+        <span class="glowing-txt">WATCH NOW </span>
+      </button>
     </div>
-    <button class="glowing-btn">
-      <span class="glowing-txt">WATCH NOW </span>
-    </button>
     <footer class="footer">
       <a href="https://github.com/eliztorr/Barbie-The-Movie">Open source </a
       >coded by
